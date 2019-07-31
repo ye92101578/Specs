@@ -8,26 +8,28 @@
     "file": "LICENSE"
   },
   "authors": {
-    "KieronZhang.": "https://github.com/KieronZhang"
-  },
-  "platforms": {
-    "ios": "7.0"
+    "KieronZhang": "https://github.com/KieronZhang"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_PhotoAlbum.git",
     "tag": "0.1.2",
     "submodules": true
   },
-  "source_files": [
-    "KZ_PhotoAlbum/*.{h,m}",
-    "KZ_PhotoAlbum/**/*.{h,m}"
-  ],
-  "resources": "KZ_PhotoAlbum/PhotoAlbum.bundle",
-  "frameworks": [
-    "UIKit",
-    "Foundation"
-  ],
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
   "requires_arc": true,
+  "ios": {
+    "frameworks": [
+      "Foundation",
+      "UIKit"
+    ],
+    "vendored_frameworks": "KZ_PhotoAlbum/KZ_PhotoAlbum_iOS.framework",
+    "resources": "KZ_PhotoAlbum/KZ_PhotoAlbum_Bundle.bundle"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
   "dependencies": {
     "KZ_VideoPlayer": [
 
@@ -38,7 +40,10 @@
     "KZ_MacroDefinition": [
 
     ],
-    "MBProgressHUD": [
+    "KZ_ReuseScrollView": [
+
+    ],
+    "KZ_HUD": [
 
     ]
   }

@@ -11,21 +11,34 @@
     "KieronZhang.": "https://github.com/KieronZhang"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_EnlargeImage.git",
-    "tag": "0.1"
+    "tag": "0.1",
+    "submodules": true
   },
-  "source_files": "KZ_EnlargeImage/*.{h,m}",
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
   "frameworks": [
     "Foundation",
     "UIKit"
   ],
+  "vendored_frameworks": "KZ_EnlargeImage/KZ_EnlargeImageFramework.framework",
   "requires_arc": true,
   "dependencies": {
     "KZ_AFCacheNetworking": [
-      "~> 0.1.1"
+
+    ],
+    "KZ_ReuseScrollView": [
+
+    ],
+    "KZ_Categories": [
+
+    ],
+    "KZ_MacroDefinition": [
+
     ]
   }
 }

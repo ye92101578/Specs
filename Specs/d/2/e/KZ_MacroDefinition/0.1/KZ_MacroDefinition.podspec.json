@@ -11,13 +11,16 @@
     "KieronZhang.": "https://github.com/KieronZhang"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_MacroDefinition.git",
     "tag": "0.1",
     "submodules": true
   },
-  "source_files": "KZ_MacroDefinition/*.h",
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
+  "vendored_frameworks": "KZ_MacroDefinition/KZ_MacroDefinitionFramework.framework",
   "requires_arc": true
 }

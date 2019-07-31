@@ -11,14 +11,17 @@
     "KieronZhang.": "https://github.com/KieronZhang"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_JSON.git",
     "tag": "0.1",
     "submodules": true
   },
-  "source_files": "KZ_JSON/*.{h,m}",
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
   "frameworks": "Foundation",
+  "vendored_frameworks": "KZ_JSON/KZ_JSONFramework.framework",
   "requires_arc": true
 }

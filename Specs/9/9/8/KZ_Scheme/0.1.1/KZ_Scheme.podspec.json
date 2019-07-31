@@ -1,24 +1,33 @@
 {
   "name": "KZ_Scheme",
   "version": "0.1.1",
-  "summary": "iOS scheme.",
+  "summary": "iOS & macOS scheme.",
   "homepage": "https://github.com/KieronZhang/KZ_Scheme",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "KieronZhang.": "https://github.com/KieronZhang"
-  },
-  "platforms": {
-    "ios": "7.0"
+    "KieronZhang": "https://github.com/KieronZhang"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_Scheme.git",
     "tag": "0.1.1",
     "submodules": true
   },
-  "source_files": "KZ_Scheme/*.{h,m}",
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
+  "requires_arc": true,
   "frameworks": "Foundation",
-  "requires_arc": true
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.10"
+  },
+  "ios": {
+    "vendored_frameworks": "KZ_Scheme/KZ_Scheme_iOS.framework"
+  },
+  "osx": {
+    "vendored_frameworks": "KZ_Scheme/KZ_Scheme_macOS.framework"
+  }
 }

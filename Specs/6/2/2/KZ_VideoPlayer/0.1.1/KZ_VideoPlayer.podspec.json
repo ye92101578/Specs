@@ -11,25 +11,31 @@
     "KieronZhang.": "https://github.com/KieronZhang"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_VideoPlayer.git",
     "tag": "0.1.1",
     "submodules": true
   },
-  "source_files": "KZ_VideoPlayer/*.{h,m}",
-  "resources": "KZ_VideoPlayer/VideoPlayer.bundle",
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
+  "resources": "KZ_VideoPlayer/KZ_VideoPlayerBundle.bundle",
   "frameworks": [
     "UIKit",
     "Foundation",
     "AVFoundation",
     "MediaPlayer"
   ],
+  "vendored_frameworks": "KZ_VideoPlayer/KZ_VideoPlayerFramework.framework",
+  "requires_arc": true,
   "dependencies": {
     "Masonry": [
-      "~> 1.0.2"
+
+    ],
+    "KZ_Categories": [
+
     ]
-  },
-  "requires_arc": true
+  }
 }

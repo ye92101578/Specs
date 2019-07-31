@@ -11,20 +11,23 @@
     "KieronZhang.": "https://github.com/KieronZhang"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_Database.git",
     "tag": "0.1",
     "submodules": true
   },
-  "source_files": "KZ_Database/*.{h,m}",
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
   "frameworks": "Foundation",
+  "vendored_frameworks": "KZ_Database/KZ_DatabaseFramework.framework",
   "libraries": "sqlite3",
   "requires_arc": true,
   "dependencies": {
     "KZ_JSON": [
-      "~> 0.1"
+
     ]
   }
 }

@@ -11,19 +11,25 @@
     "KieronZhang.": "https://github.com/KieronZhang"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_MultiPageViewController.git",
     "tag": "0.1",
     "submodules": true
   },
-  "source_files": "KZ_MultiPageViewController/*.{h,m}",
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
   "frameworks": "Foundation",
+  "vendored_frameworks": "KZ_MultiPageViewController/KZ_MultiPageViewControllerFramework.framework",
   "requires_arc": true,
   "dependencies": {
     "KZ_Categories": [
-      "~> 0.1"
+
+    ],
+    "KZ_ReuseScrollView": [
+
     ]
   }
 }

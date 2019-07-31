@@ -11,22 +11,25 @@
     "KieronZhang.": "https://github.com/KieronZhang"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_DatabaseModel.git",
     "tag": "0.1",
     "submodules": true
   },
-  "source_files": "KZ_DatabaseModel/*.{h,m}",
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
   "frameworks": "Foundation",
+  "vendored_frameworks": "KZ_DatabaseModel/KZ_DatabaseModelFramework.framework",
   "requires_arc": true,
   "dependencies": {
     "KZ_Model": [
-      "~> 0.1.1"
+
     ],
     "KZ_Database": [
-      "~> 0.1"
+
     ]
   }
 }

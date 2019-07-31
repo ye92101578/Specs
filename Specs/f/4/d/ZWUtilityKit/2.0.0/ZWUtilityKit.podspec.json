@@ -1,9 +1,9 @@
 {
   "name": "ZWUtilityKit",
   "version": "2.0.0",
-  "summary": "从简化版做起经常用到的一些公共代码.",
+  "summary": "源码版本 从简化版做起经常用到的一些公共代码.",
   "description": "经常用到的一些公共代码.为了方便使用进行的简单封装",
-  "homepage": "https://github.com/EadkennyChan/ZWUtilityKit-lib",
+  "homepage": "https://github.com/EadkennyChan/ZWUtilityKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "Eadkennychan": "Eadkennychan@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Eadkennychan/ZWUtilityKit-lib.git",
+    "git": "https://github.com/EadkennyChan/ZWUtilityKit.git",
     "tag": "2.0.0"
   },
   "social_media_url": "https://github.com/EadkennyChan",
@@ -20,7 +20,21 @@
   "platforms": {
     "ios": "6.0"
   },
-  "vendored_frameworks": "ZWUtilityKit.framework",
+  "source_files": "ZWUtilityKit/**/*.{h,m}",
+  "dependencies": {
+    "Reachability": [
+      "~> 3.2"
+    ],
+    "JSONKit-ZW": [
+      "~>2.0.4"
+    ],
+    "Masonry": [
+      "~>1.0.2"
+    ]
+  },
+  "xcconfig": {
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
+  },
   "frameworks": [
     "SystemConfiguration",
     "Security",

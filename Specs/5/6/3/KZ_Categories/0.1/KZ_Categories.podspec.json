@@ -11,17 +11,22 @@
     "KieronZhang.": "https://github.com/KieronZhang"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_Categories.git",
     "tag": "0.1",
     "submodules": true
   },
-  "source_files": [
-    "KZ_Categories/*.{h,m}",
-    "KZ_Categories/**/*.{h,m}"
-  ],
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
   "frameworks": "Foundation",
-  "requires_arc": true
+  "vendored_frameworks": "KZ_Categories/KZ_CategoriesFramework.framework",
+  "requires_arc": true,
+  "dependencies": {
+    "KZ_JSON": [
+
+    ]
+  }
 }

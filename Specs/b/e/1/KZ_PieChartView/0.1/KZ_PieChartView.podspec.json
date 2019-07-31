@@ -11,20 +11,20 @@
     "KieronZhang.": "https://github.com/KieronZhang"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "source": {
     "git": "https://github.com/KieronZhang/KZ_PieChartView.git",
     "tag": "0.1",
     "submodules": true
   },
-  "source_files": [
-    "KZ_PieChartView/*.{h,m}",
-    "KZ_PieChartView/**/*.{h,m}"
-  ],
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  },
   "frameworks": [
     "UIKit",
     "Foundation"
   ],
+  "vendored_frameworks": "KZ_PieChartView/KZ_PieChartViewFramework.framework",
   "requires_arc": true
 }
